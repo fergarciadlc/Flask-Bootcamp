@@ -14,5 +14,9 @@ def puppy(name):
     # Page for an individual puppy.
     return '<h1>This is a page for {}<h1>'.format(name)
 
+@app.route('/users/<name>')
+def namepage(name):
+    return f"<h1>{name.title()}'s information page!</h1>"
+
 if __name__ == '__main__':
     app.run()
