@@ -1,0 +1,22 @@
+{% extends '3-base.html' %}
+{% block content %}
+  <h1>Report for {{username}}</h1>
+  {% if auth_user['lowercase'] and auth_user['uppercase'] and auth_user['number'] %}
+      <h2>Username passed :D!</h2>
+  {% else %}
+      <h2>Username not passed :(</h2>
+      <p>Here is what happened:</p>
+      <ul>
+        {% if not auth_user['lowercase'] %}
+        <li>You did not use a lowercase character.</li>
+        {% endif %}
+        {% if not auth_user['uppercase'] %}
+        <li>You did not use an uppercase character.</li>
+        {% endif %}
+        {% if not auth_user['number'] %}
+        <li>You did not end your username with a number.</li>
+        {% endif %}
+      </ul>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic ControlFlow</title>
+    </head>
+    <body>
+        <h1>Control Flow</h1>
+        <ul>
+            {% for item in mylist %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for pup in puppies %}
+                <li>{{ pup }}</li>
+            {% endfor %}
+        </ul>
+        {% if 'Rufus' in puppies %}
+            <p>Found RUFUS in puppies</p>
+        {% else %}
+            <p>RUFUS not found</p>
+        {% endif %}
+    </body>
+</html>
