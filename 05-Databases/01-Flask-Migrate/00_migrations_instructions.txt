@@ -4,7 +4,7 @@ simple text file as well so you can reference them :)
 
 We first set up our migrations directory by running:
 
-  flask db init
+    flask db init
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!
@@ -49,11 +49,11 @@ allows us to add a message to our unique id.
 
 The next command then will look like this for us:
 
-flask db migrate -m "created puppy table"
+    flask db migrate -m "created puppy table"
 
 Keep in mind this command is not actually running this migration or updating our
 database based on model changes. Its just created a new file that can later be
 used to update the database. To run the pending migration just created, we use
 the upgrade command. Which looks like this:
 
-flask db upgrade
+    flask db upgrade

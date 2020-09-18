@@ -1,0 +1,10 @@
+"""
+Run (Windows):
+    set FLASK_APP=Models.py (this file)
+
+    flask db init (to initalize database, migrations folder created)
+
+    flask db migrate -m "comment" (run with every new change in the models to commit)
+
+    flask db upgrade (like git push)
+"""
