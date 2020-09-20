@@ -9,9 +9,17 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'mysecretkey'
 
+"""
+Go to: https://github.com/singingwolfboy/flask-dance-google#local-installation
+and follow the instructions, secure key exposed to public repo
+client = xxxxxxxx.apps.googleusercontent.com
+client_secret='xxxxxxxxxxxxxxxxxxxxxxxx',
+
+"""
+
 blueprint = make_google_blueprint(
-    client_id='135501785619-e8toph4vlnsi9b8rg5tr5a0s7jmm0b6p.apps.googleusercontent.com',
-    client_secret='ZKJomtZc4kscjbgtAno-23nM',
+    client_id='',
+    client_secret='',
     offline=True,
     scope=['profile', 'email']
 )
