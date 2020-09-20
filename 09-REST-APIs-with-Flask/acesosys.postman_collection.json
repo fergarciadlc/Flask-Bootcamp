@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "6b51886e-b69d-4224-b173-e15235a815f2",
+		"name": "acesosys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear orden",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"dateOrder\" : \"2019-02-01\",\r\n    \"acesoUser\" : {\r\n    \t\"userID\": 1\r\n    },\r\n    \"applicant\": {\r\n        \"applicantID\": 1,\r\n        \"companyID\": 1,\r\n        \"fullName\": \"Alejandro Gabriel Guerrero\",\r\n       \t\"email\": \"gbrayhan@gmail.com\",\r\n        \"phone\": \"5549119655\"\r\n    },\r\n    \"medicines\" : [\r\n         {\r\n            \"medicineID\" : 111,\r\n            \"eanCode\" : \"SD122\",\r\n            \"purchasePrice\" : 1200.50,\r\n            \"pmp\": 1600.50,\r\n            \"salePrice\": 1500.50,\r\n            \"quantity\": 5,\r\n            \"distributor\": \"Dist Farm\"\r\n        },\r\n        {\r\n            \"medicineID\": 223,\r\n            \"eanCode\" : \"SDw22\",\r\n            \"purchasePrice\": 2200.50,\r\n            \"pmp\": 2600.50,\r\n            \"salePrice\": 2500.50,\r\n            \"quantity\": 12,\r\n            \"distributor\": \"Farm Dist\"\r\n        }\r\n    ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/save-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST save-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"fergarcia\",\n\t\"fullName\": \"Fernando García de la Cruz\",\n\t\"email\": \"ferchoget@gmail.com\",\n\t\"jobPosition\": \"Developer\",\n\t\"password\": \"qwerty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/save-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON-POST Patients",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"patientName\": \"Homero\",\n\t\"address\": \"mi casa\",\n\t\"refAddress\": \"p001\",\n\t\"poliza\": \"fef\",\n\t\"NumBen\": 1234,\n\t\"telefono\": \"551346484\",\n\t\"correo\": \"f4@h.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/save-patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save-patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET query-medicine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-medicine?description=para",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-medicine"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "para"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET query companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-companies?description=Vita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-companies"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "Vita"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET query-applicant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-applicant?description=al",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-applicant"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "al"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET query-patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-patients?description=o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-patients"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "o"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sub_company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-subcompanies?idCompany=2&name=o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-subcompanies"
+					],
+					"query": [
+						{
+							"key": "idCompany",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "o"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET query-order-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/query-order-id?id=124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query-order-id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "124"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderPDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order-pdf?id=124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order-pdf"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "124"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

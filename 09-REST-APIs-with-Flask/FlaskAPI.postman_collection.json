@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "964fa7fb-aab5-465c-b178-82e074ca6daf",
+		"name": "FlaskAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-HelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-GETPuppy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/puppy/Davo",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Davo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-AllPuppies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/puppies",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"puppies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-AddPuppy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/puppy/Sammy",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Sammy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-DELPuppy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/puppy/Sammy",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Sammy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-POSTPuppy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/puppy/Frijol",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Frijol"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-AllPuppies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/puppies",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"puppies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"fernando\",\r\n    \"password\": \"pass2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-GetWithToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDA2MzIwNTcsImlhdCI6MTYwMDYzMTc1NywibmJmIjoxNjAwNjMxNzU3LCJpZGVudGl0eSI6Mn0.ArhInVE_QL02bcqCnuUV_XT3JulAc0SA-vQO0nA5K3I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/puppies",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"puppies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-AddDatabase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/puppy/Giorgio",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Giorgio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-GetALLDatabase",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/puppies",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"puppies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-DELDatabase",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/puppy/Salamy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"puppy",
+						"Salamy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
